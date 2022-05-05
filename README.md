@@ -6,7 +6,8 @@
 - `git clone https://github.com/abmurli/peakon_murali.git`
 - `cd nodeapp`
 - `docker-compose up`
-```
+
+```docker-compose up
 [+] Running 3/3
  ⠿ Network nodeapp_default  Created                                                                                                                      0.1s
  ⠿ Container nodeapp-db-1   Created                                                                                                                      0.2s
@@ -39,7 +40,8 @@ nodeapp-db-1   |
 nodeapp-db-1   |
 nodeapp-db-1   | Success. You can now start the database server using:
 nodeapp-db-1   |
-nodeapp-db-1   |     pg_ctl -D /var/lib/postgresql/data -l logfile start```
+nodeapp-db-1   |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+```
 
 ### Steps to test
 - `curl http://localhost:8080`
