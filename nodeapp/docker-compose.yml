@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_USERNAME}
+      POSTGRES_USER: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: demo
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+  web:
+    image: abmurli/node-web-app:latest
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
